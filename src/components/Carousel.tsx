@@ -103,7 +103,12 @@ const Carousel = () => {
       <Center></Center>
     </Card>,
 
-    <Card border="solid grey" className="card">
+    <Card
+      border="solid grey"
+      className="card"
+      paddingTop="2rem"
+      paddingBottom="2rem"
+    >
       <CardHeader
         style={{
           textAlign: "center",
@@ -239,19 +244,19 @@ const Carousel = () => {
   return (
     <>
       <Center>
-        <Heading paddingTop={20}>My Projects</Heading>
+        <Heading padding={20}>My Projects</Heading>
       </Center>
       <div className="container">
         {data.map((item, index) => {
           return (
             <>
-              <h1
+              <div
                 className="each-item"
                 key={index}
                 style={{ transform: `translate(-${CarouselIndex * 100}%)` }}
               >
                 {item}
-              </h1>
+              </div>
             </>
           );
         })}
