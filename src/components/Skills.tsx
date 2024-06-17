@@ -17,6 +17,9 @@ import {
   FaDocker,
   FaNodeJs,
   FaDatabase,
+  FaWordpress,
+  FaServer,
+  FaPhp,
 } from "react-icons/fa";
 
 import AOS from "aos";
@@ -70,6 +73,26 @@ const Skills = () => {
               style={{ display: "block", marginRight: "5px" }}
             />
             CSS{" "}
+          </Text>
+          <Text className="Text" paddingBottom={10} fontSize="1.5rem">
+            <FaWordpress
+              size={50}
+              style={{ display: "block", marginRight: "5px" }}
+            />{" "}
+            Wordpress
+          </Text>
+
+          <Text className="Text" paddingBottom={10} fontSize="1.5rem">
+            <FaServer
+              size={50}
+              style={{ display: "block", marginRight: "5px" }}
+            />{" "}
+            SQL
+          </Text>
+
+          <Text className="Text" paddingBottom={10} fontSize="1.5rem">
+            <FaPhp size={50} style={{ display: "block", marginRight: "5px" }} />{" "}
+            PHP
           </Text>
           <Text className="Text" paddingBottom={10} fontSize="1.8rem">
             <FaDocker

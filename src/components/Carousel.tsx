@@ -9,8 +9,6 @@ import {
   Link,
   Image,
   Text,
-  SimpleGrid,
-  VStack,
 } from "@chakra-ui/react";
 import cloudHost from "../assets/cloudHost.png";
 import gameHub from "../assets/gamehub.png";
@@ -19,55 +17,42 @@ import vidly from "../assets/vidly.png";
 // new component
 const Carousel = () => {
   const data = [
-    <VStack align="center">
-      <SimpleGrid
-        spacing={4}
-        marginX={3}
-        marginY={39}
-        templateColumns={[
-          "repeat(auto-fill, minmax(300px, 1fr))",
-          "repeat(auto-fill, minmax(500px, 1fr))",
-        ]}
-        width="100%"
+    <Card className="card" border="solid grey">
+      <Heading size="lg" textAlign="center">
+        {" "}
+        Cloud Hosting
+      </Heading>
+      <Link
+        href="https://astonishing-tarsier-b414aa.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <Card className="card" border="solid grey" data-aos="fade-right">
-          <Heading size="lg" textAlign="center">
-            {" "}
-            Cloud Hosting
-          </Heading>
-          <Link
-            href="https://astonishing-tarsier-b414aa.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <p
-              style={{
-                textAlign: "center",
-                marginTop: "3rem",
-              }}
-            >
-              Click to View!
-            </p>
-          </Link>
-          <CardBody className="card-body" paddingLeft={2}>
-            <Link
-              href="https://astonishing-tarsier-b414aa.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image src={cloudHost} className="image" />
-            </Link>
+        <p
+          style={{
+            textAlign: "center",
+            marginTop: "3rem",
+          }}
+        >
+          Click to View!
+        </p>
+      </Link>
+      <CardBody className="card-body" paddingLeft={2}>
+        <Link
+          href="https://astonishing-tarsier-b414aa.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image src={cloudHost} className="image" />
+        </Link>
 
-            <Text padding={5} className="text-limited">
-              This was a project which utilized vanilla html/CSS with some
-              frameworks for dynamic scrolling as well.
-            </Text>
-          </CardBody>
-        </Card>
-      </SimpleGrid>
-    </VStack>,
+        <Text padding={5} className="text-limited">
+          This was a project which utilized vanilla html/CSS with some
+          frameworks for dynamic scrolling as well.
+        </Text>
+      </CardBody>
+    </Card>,
 
-    <Card border="solid grey" data-aos="fade-left" className="card">
+    <Card border="solid grey" className="card">
       <CardHeader
         style={{
           textAlign: "center",
@@ -118,7 +103,7 @@ const Carousel = () => {
       <Center></Center>
     </Card>,
 
-    <Card border="solid grey" data-aos="fade-left" className="card">
+    <Card border="solid grey" className="card">
       <CardHeader
         style={{
           textAlign: "center",
@@ -165,7 +150,7 @@ const Carousel = () => {
       <Center></Center>
     </Card>,
 
-    <Card border="solid grey" data-aos="fade-left" className="card">
+    <Card border="solid grey" className="card">
       <CardHeader
         style={{
           textAlign: "center",
@@ -253,6 +238,9 @@ const Carousel = () => {
 
   return (
     <>
+      <Center>
+        <Heading paddingTop={20}>My Projects</Heading>
+      </Center>
       <div className="container">
         {data.map((item, index) => {
           return (
