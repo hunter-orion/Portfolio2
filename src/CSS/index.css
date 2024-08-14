@@ -6,7 +6,6 @@
   }
   
   .each-item {
-    height: 28.3rem;
     min-width: 100%;
     width: 100%;
     display: flex;
@@ -48,7 +47,7 @@
     cursor: pointer;
   }
   .active {
-    background-color: #252525;
+    background-color: #280257;
   }
   .image {
   display: block;
